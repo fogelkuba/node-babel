@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev" : "nodemon -w src --exec \"babel-node src\"",
+    "prestart": "npm run -s build",
+    "start": "node dist/index.js",
     "build": "rimraf .dist && babel ./src -d ./dist"
   },
   "repository": {
